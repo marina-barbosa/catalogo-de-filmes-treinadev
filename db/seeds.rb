@@ -44,3 +44,13 @@ Filmmaker.create!(name: 'Chris Buck', birthday: '25/02/1958', nationality: 'Amer
 
 
 # Cadastrando filmes
+Film.create!(
+    title: 'Interstellar',
+    year: '2014',
+    synopsis: 'As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.',
+    country: 'Estados Unidos',
+    duration: 169,
+    poster: 'https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg',
+    filmmaker_id: Filmmaker.find_by(name: 'Christopher Nolan').id,
+    genre_id: Genre.find_by(name: 'Ficção Científica').id
+)

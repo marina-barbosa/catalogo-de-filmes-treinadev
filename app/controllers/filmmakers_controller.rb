@@ -11,7 +11,12 @@ class FilmmakersController < ApplicationController
         @filmmaker = Filmmaker.new
     end
     def create
-        @filmmaker = Filmmaker.new(name: params[:filmmaker][:name])
+        @filmmaker = Filmmaker.new(
+            name: params[:filmmaker][:name],
+            birthday: params[:film][:birthday],
+            nationality: params[:film][:nationality],
+            genre_id: params[:film][:genre_id]
+            )
         if @filmmaker.save
             return  redirect_to filmmakers_path
         end
@@ -22,7 +27,12 @@ class FilmmakersController < ApplicationController
     end
     def update
         @filmmaker = Filmmaker.find(params[:id])
-        if @filmmaker.update(name: params[:filmmaker][:name])
+        if @filmmaker.update(
+            name: params[:filmmaker][:name],
+            birthday: params[:film][:birthday],
+            nationality: params[:film][:nationality],
+            genre_id: params[:film][:genre_id]
+            )
         return  redirect_to filmmakers_path
         end
         render :edit 
