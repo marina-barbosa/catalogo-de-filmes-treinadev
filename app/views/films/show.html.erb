@@ -1,0 +1,16 @@
+
+<h1><%= @film.id%> - <%= @film.title%></h1>
+<%= link_to 'Editar', edit_film_path %>
+
+<div>Ano: <%= @film.year%></div>
+<div>Sinopse: <%= @film.synopsis%></div>
+<div>País de origem:<%= @film.country%></div>
+<div>Duração: <%= @film.duration%></div>
+<div>Gênero: <%= @film.genre_id%></div>
+<div>Diretor: <%= @film.filmmaker_id%></div>
+<div><img src="<%= @film.poster%>"></div>
+<div>Status: <%= @film.release_status%></div>
+<div><%= button_to 'release', release_film_path, { method: 'patch' } %></div>
+<div>Status: <%= @film.post_status%></div>
+<div><%= button_to 'publicar', publish_film_path, { method: 'patch' } %></div>
+

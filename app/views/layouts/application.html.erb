@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Catalogo de Filmes</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li> <%= link_to 'Filmes', root_path %> </li>
+        <li> <%= link_to 'Gêneros', genres_path %> </li>
+        <li> <%= link_to 'Diretores', filmmakers_path %> </li>
+        <li> <%= link_to 'Cadastrar Gênero', new_genre_path %> </li>
+        <li> <%= link_to 'Cadastrar Diretor', new_filmmaker_path %> </li>
+        <li> <%= link_to 'Cadastrar Filme', new_film_path %> </li>
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

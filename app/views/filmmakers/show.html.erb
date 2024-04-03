@@ -1,0 +1,9 @@
+
+<h1>Filmes do Diretor: <%= @filmmaker.name%></h1>
+
+<%= link_to 'Editar', edit_filmmaker_path %>
+
+<% @films.each do | film | %>
+    <div><%= film.id%> - <%= film.title%> (<%= film.year%>)</div>
+<% end %>
+

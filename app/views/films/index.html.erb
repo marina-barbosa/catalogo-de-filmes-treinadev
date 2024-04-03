@@ -1,0 +1,6 @@
+<h1>Filmes</h1>
+<% @films.each do |film| %>
+    <%= link_to film_path(film) do %>
+        <div><%= film.id %> - <%= film.title %> (<%= film.year %>)</div>
+    <% end %>
+<% end %>

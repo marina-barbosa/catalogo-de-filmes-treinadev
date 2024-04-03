@@ -1,0 +1,4 @@
+<h1>Diretores</h1>
+<% @filmmakers.each do | filmmaker | %>
+    <div><%= link_to filmmaker.name, filmmaker_path(filmmaker.id)%></div>
+<% end %>
